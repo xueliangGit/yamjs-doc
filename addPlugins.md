@@ -2,6 +2,8 @@
 
 yamjs支持自己编写扩展
 
+[扩展插件集](http://plugins.yamjs.cn/dist)
+
 ## 扩展规则
 
 yamjs提供一个静态方法`Yam.use`用来安装扩展
