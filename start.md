@@ -12,3 +12,10 @@ yamjs内部实现了集成[webComponents](https://developer.mozilla.org/zh-CN/do
 
 `yamjs create app`
 
+在目录路径执行
+
+- `yarn dev`开始开发模式
+
+- `yarn build`打包应用；开发应用时类似`vue,reactjs`的应用
+
+- `yarn build:all` 打包组件未模块文件，会自动生成`yamComponet.esm.min.js`esModule类型文件,`yamComponet.common.min` CommoJS 类型文件,`yamComponet.min.js` UMD文件，三种类型用于其他框架使用

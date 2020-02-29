@@ -111,6 +111,7 @@ export default Component({
 - `props`父级传值（`[]`）
 
   - 来自于父级的传值。在组件内部传值随意，
+  - 若需要设置默认值，直接在`$data`中设定就行
   - **组件环境外部向组件传值时只能是字符串形式**。
 
 - `canBeCalledExt`是否可以被外部调用(false)
@@ -146,9 +147,9 @@ redenr(){
 }
 ```
 
-若是你在程序运行中去手动添加参数，区更改改参数是没有变化的，需要调用update方法统一管理（亦可自己写一个公共类似setData的方法去管理）
+若是你在程序运行中去手动添加参数，去更改改参数是没有变化的，需要调用update方法统一管理（亦可自己写一个公共类似setData的方法去管理）
 
-
+***这里后期将完成更新机制***
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="yamjs-demo-1" src="//codepen.io/xueliang/embed/eYOjxoY/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/xueliang/pen/eYOjxoY/'>yamjs-demo-1</a> by Xuxueliang
