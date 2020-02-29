@@ -39,4 +39,5 @@
 
   - [扩展规则](./addPlugins.md#扩展规则)
   - [扩展编写](./addPlugins.md#扩展编写)
+* [更新日志](./History.md)
 
