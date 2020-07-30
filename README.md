@@ -1,6 +1,6 @@
 # YamJs 是什么？
 
-YamJS ![](https://img.shields.io/badge/yamjs-0.4.0-brightgreen.svg)受vue和react启示，结合现在的趋势，成为一个向html看齐的组件编写基类，让你的组件不受框架的约束，达到即写即用，完美结合vue，react等框架，编写出来的组件贴近html原生用法；
+YamJS ![yamjs version](https://img.shields.io/npm/v/yamjs.svg) 受vue和react启示，结合现在的趋势，成为一个向html看齐的组件编写基类，让你的组件不受框架的约束，达到即写即用，完美结合vue，react等框架，编写出来的组件贴近html原生用法；
 
 yamjs是使用jsx语法去编写组间的，所以在写法上和react类似；后期会根据需要去完善jsx语法的编写方式。
 
