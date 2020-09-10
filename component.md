@@ -32,7 +32,7 @@
 
 - 父组件调用子组件方法：通过在子组件上设置`ref`属性（`ref=elm`），父组件中通过`this.$refs`来获取子组件的信息(`this.$refs.elm`)，直接直接调用子组件的方法。  
 
-  _**yamjs**支持`ref={(v)=>{this.dom=v}}`写法；直接把ref赋值到`this.com`上，这样在this.$refs上就取不到ref了![](https://img.shields.io/badge/yamjs-0.2.5-brightgreen.svg)_
+  _**yamjs**支持`ref={(v)=>{this.dom=v}}`写法；直接把ref赋值到`this.com`上，这样在this.$refs上就取不到ref了![](https://img.shields.io/badge/yamjs-0.2.5+-brightgreen.svg)_
 
 - 子组件调用父组件方法：通过子组件以属性方式去绑定一个方法，这样就会传到子组件内，子组件内通过`this.emitProp('fnName'[,...param])`方法来出发，第一个参数是方法名，后面参数。该属性不需要在注解的 prop 内声明。
 

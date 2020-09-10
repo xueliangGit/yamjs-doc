@@ -187,3 +187,46 @@ yamjs暂时只支持使用了react的jsx语言去编写的，选择jsx的原因�
 
 样式写法选用的stylus语法，需要自己使用require导入。
 
+## 函数式组件 （0.6.0+）
+
+> 在0.6.0+版本支持标签式引入函数式组件
+
+在0.6.0之前，仅支持普通函数式组件，调用时当作一个函数去处理，传入的参数，工函数组件使用，且不支持外部绑定事件，
+
+```jsx
+function fnCom (props){return <div>{props.title} is FnCom </div>}
+
+// .....
+{
+	render (){
+  	return <div>
+    {fnCom({title:this.title})} // 0.6.0-
+      
+     <fnCom title={this.title} onClick={()=>{console.log('emit fn')}} /> // 0.6.0+
+      
+    </div>
+	}
+}
+
+// .....
+```
+
+在0.6.0版本支持了标签式引入函数组件，可以把简单的函数式组件当作标签去使用（但是函数组件内不支持状态变化，后续会支持），什么事件，参数绑定等都可使用；直接使用函数调用也支持事件绑定，将相应的属性当作参数传入就行；如下
+
+```jsx
+function fnCom (props){return <div $props={props}>{props.title} is FnCom </div>}
+
+// .....
+{
+	render (){
+  	return <div>
+    {fnCom({title:this.title,onClick:()=>{console.log('emit Fn is Two')}})} // 0.6.0+
+     <fnCom title={this.title} onClick={()=>{console.log('emit fn')}} /> // 0.6.0+
+      
+    </div>
+	}
+}
+
+// .....
+```
+

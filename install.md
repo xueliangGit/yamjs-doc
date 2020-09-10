@@ -2,11 +2,11 @@
 
 #### # 兼容性
 
-yamjs 暂时只支持主流浏览器以及ie9+及其以上；
+yamjs 暂时只支持主流浏览器以及ie9+及其以上；（由于更新拆分出支持ie版本和不支持ie版本）
 
 #### # 更新日志 
 
-最新稳定版版本：0.4.0
+最新稳定版版本：0.6.0
 
 [更新日志](./History.md)
 
@@ -39,3 +39,5 @@ umd ： yam.min.js
 CommonJs:  yam.common.min.js
 
 ESmodule: yam.esm.min.js
+
+IE:yam.ie.min.js

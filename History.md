@@ -1,5 +1,69 @@
 # 更新日志
+-  0.6.0 (2020-09)
 
+  - 支持与 vue 混写，嵌套
+  - 优化更新机制，一个组件一个组件的更新
+  - 优化 diff
+  - 支持 标签式的 function Component,
+
+    - 使用方式，直接函数方式，吧 props 当作参数传入
+    - 支持标签引入 当作普通匿名标签，需要依附`Yamjs`才可以
+
+    ```js
+    function GetList(props) {
+      let { index } = props
+      // this.props = props
+      console.log(this)
+      return (
+        <div $props={props}>
+          {props}
+          <div index={index + 12}>asdads is ACopm</div>
+          IS GETLIST FUNCTION COMPONENTS {index}
+        </div>
+      )
+    }
+    @Component({
+      tagName: 'switch-tab',
+      style: require('./index.stylus'),
+      props: ['tabs'],
+    })
+    class App extends Yam {
+      render() {
+        return (
+          <div>
+          <!-- 方法一 -->
+         GetList({ index: this.active, onClick: () => console.log(222) })}
+         <!-- 方法二 -->
+         <GetList />
+          </div>
+        )
+      }
+    }
+    ```
+
+
+- ## 0.5.5（2020-3-30）
+
+  - 支持异步组件的使用
+  
+    ```jsx
+    const app=()=>import('./a.js')
+    
+    ....
+    
+    render(){
+      return <div>
+        <app/>
+        </div>
+    }
+    ```
+  
+    
+  
+- ## 0.5.0（2020-3-14）
+
+  -  支持使用 [yamjs-loader](https://www.npmjs.com/package/yamjs-loader) webpack 加载器，并且已加入热更新；
+  
 - ## 0.4.0 (2020-02-29)
 
   - 优化 ie 系列加载（支持 ie9+）

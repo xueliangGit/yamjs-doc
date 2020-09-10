@@ -16,19 +16,19 @@
   * [生命周期](./instance.md#生命周期)
   * [公共方法](./instance.md#公共方法)
   * [模板语言](./instance.md#模板语言)
+  * [函数式组件](./instance.md#函数式组件)
 
 * [深入了解组件](./component.md)
-
-  * [组件传值](./component.md#组件传值)
+* [组件传值](./component.md#组件传值)
     * [环境内部组件间传值](./component.md#环境内部组件间传值)
     * [外环境给组件传值](./component.md#外环境给组件传值)
-
-  * [组件调用父级方法](./component.md#组件调用父级方法)
+  
+* [组件调用父级方法](./component.md#组件调用父级方法)
     * [环境内部调用](./component.md#环境内部调用)
     * [环境外部调用](./component.md#环境外部调用)
-
-  * [组件插槽](./component.md#组件插槽)
-
+  
+* [组件插槽](./component.md#组件插槽)
+  
 * [yamjs扩展](./plugins.md)
 
   * [定时器，延时器](./plugins.md#定时器，延时器)
