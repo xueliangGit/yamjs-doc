@@ -565,11 +565,13 @@
 </li>
 <li><p><code>style</code>&#x6837;&#x5F0F;</p>
 <ul>
-<li><p>&#x6682;&#x65F6;&#x652F;&#x6301;&#x5F15;&#x5165;&#x5199;&#x6CD5;&#xFF0C;&#x6837;&#x5F0F;&#x6682;&#x65F6;&#x4F7F;&#x7528; stylus &#x8BED;&#x6CD5;&#xFF0C;&#x6846;&#x67B6;&#x7EA6;&#x5B9A;&#x4E86;&#x4E00;&#x79CD;&#x89C4;&#x5219;&#xFF0C;&#x5728;&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#x9876;&#x90E8;&#x82E5;&#x662F;&#x51FA;&#x73B0;<code>[scope]</code>&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x6837;&#x5F0F;&#x4EC5;&#x4EC5;&#x5BF9;&#x8BE5;&#x7EC4;&#x4EF6;&#x751F;&#x6548;&#xFF0C;&#x82E5;&#x662F;&#x6CA1;&#x6709;&#x51FA;&#x73B0;<code>[scope]</code>&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x6837;&#x5F0F;&#x5728; dom &#x6839;&#x7ED3;&#x70B9;&#x4E0B;&#x5168;&#x5C40;&#x6709;&#x6548;&#xFF1A;&#x4F8B;&#x5982;</p>
+<li><p>&#x6682;&#x65F6;&#x652F;&#x6301;&#x5F15;&#x5165;&#x5199;&#x6CD5;&#xFF0C;&#x6837;&#x5F0F;&#x6682;&#x65F6;&#x4F7F;&#x7528; stylus &#x8BED;&#x6CD5;&#xFF0C;&#x6846;&#x67B6;&#x7EA6;&#x5B9A;&#x4E86;&#x4E00;&#x79CD;&#x89C4;&#x5219;&#xFF0C;&#x5728;&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#x9876;&#x90E8;&#x82E5;&#x662F;&#x51FA;&#x73B0;<code>[config]</code>&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x6837;&#x5F0F;&#x4EC5;&#x4EC5;&#x5BF9;&#x8BE5;&#x7EC4;&#x4EF6;&#x751F;&#x6548;&#xFF0C;&#x82E5;&#x662F;&#x6CA1;&#x6709;&#x51FA;&#x73B0;<code>[config]</code>&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x6837;&#x5F0F;&#x5728; dom &#x6839;&#x7ED3;&#x70B9;&#x4E0B;&#x5168;&#x5C40;&#x6709;&#x6548;&#xFF1A;&#x4F8B;&#x5982;</p>
 <ul>
-<li><p>&#x5E26;&#x6709;<code>[scope]</code></p>
+<li><p>&#x5E26;&#x6709;<code>{scoped:true}</code></p>
 <pre><code class="lang-stylus"><span class="hljs-comment">// styl &#x6837;&#x5F0F;</span>
-[scope]
+[config]{
+  scoped:true
+}
 <span class="hljs-selector-tag">div</span>
   <span class="hljs-attribute">height</span> <span class="hljs-number">100%</span>
   <span class="hljs-attribute">font-weight</span> bold
@@ -578,11 +580,11 @@
 </code></pre>
 <p>&#x7F16;&#x8BD1;&#x540E;&#x662F;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-  <span class="hljs-selector-attr">[dom=&quot;com_go-top&quot;]</span> <span class="hljs-selector-tag">div</span> {
+   <span class="hljs-selector-tag">div</span><span class="hljs-selector-attr">[dom=&quot;com_go-top&quot;]</span> {
     <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
     <span class="hljs-attribute">font-weight</span>: bold;
   }
-  <span class="hljs-selector-attr">[dom=&quot;com_go-top&quot;]</span> <span class="hljs-selector-tag">a</span> {
+   <span class="hljs-selector-tag">a</span><span class="hljs-selector-attr">[dom=&quot;com_go-top&quot;]</span> {
     <span class="hljs-attribute">display</span>: inline-block;
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
@@ -591,7 +593,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 </li>
-<li><p>&#x82E5;&#x662F;&#x4E0D;&#x5E26;&#x6709;<code>[scope]</code></p>
+<li><p>&#x82E5;&#x662F;&#x4E0D;&#x5E26;&#x6709;<code>{scope:true}</code></p>
 <pre><code class="lang-stylus"><span class="hljs-comment">// styl &#x6837;&#x5F0F;</span>
 <span class="hljs-selector-tag">div</span>
   <span class="hljs-attribute">height</span> <span class="hljs-number">100%</span>
@@ -660,7 +662,7 @@
   $created(){
     <span class="hljs-keyword">this</span>.list=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]
   }
-redenr(){
+render(){
   <span class="hljs-keyword">return</span> {<span class="hljs-keyword">this</span>.list.map(v=&gt;<span class="hljs-keyword">this</span>.getList(v))}
 }
 }
@@ -780,7 +782,7 @@ redenr(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"yamjs组件实例","level":"1.5","depth":1,"next":{"title":"组件实例","level":"1.5.1","depth":2,"anchor":"#组件实例","path":"instance.md","ref":"./instance.md#组件实例","articles":[]},"previous":{"title":"起步","level":"1.4","depth":1,"path":"start.md","ref":"./start.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"instance.md","mtime":"2020-09-10T08:08:35.336Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-10T08:16:41.421Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"yamjs组件实例","level":"1.5","depth":1,"next":{"title":"组件实例","level":"1.5.1","depth":2,"anchor":"#组件实例","path":"instance.md","ref":"./instance.md#组件实例","articles":[]},"previous":{"title":"起步","level":"1.4","depth":1,"path":"start.md","ref":"./start.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"instance.md","mtime":"2020-09-24T10:04:52.429Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-24T10:06:10.778Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

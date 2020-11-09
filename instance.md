@@ -41,13 +41,15 @@ export default Component({
 
 - `style`样式
 
-  - 暂时支持引入写法，样式暂时使用 stylus 语法，框架约定了一种规则，在样式文件顶部若是出现`[scope]`关键字，那么这个样式仅仅对该组件生效，若是没有出现`[scope]`关键字，那么该样式在 dom 根结点下全局有效：例如
+  - 暂时支持引入写法，样式暂时使用 stylus 语法，框架约定了一种规则，在样式文件顶部若是出现`[config]`关键字，那么这个样式仅仅对该组件生效，若是没有出现`[config]`关键字，那么该样式在 dom 根结点下全局有效：例如
 
-    - 带有`[scope]`
+    - 带有`{scoped:true}`
 
       ```stylus
       // styl 样式
-      [scope]
+      [config]{
+        scoped:true
+      }
       div
         height 100%
         font-weight bold
@@ -59,11 +61,11 @@ export default Component({
 
       ```html
       <style>
-        [dom="com_go-top"] div {
+         div[dom="com_go-top"] {
           height: 100%;
           font-weight: bold;
         }
-        [dom="com_go-top"] a {
+         a[dom="com_go-top"] {
           display: inline-block;
         }
       </style>
@@ -72,7 +74,7 @@ export default Component({
       </div>
       ```
 
-    - 若是不带有`[scope]`
+    - 若是不带有`{scope:true}`
 
       ```stylus
       // styl 样式
@@ -141,7 +143,7 @@ class App extend yamjs {
   $created(){
     this.list=[1,2,3,4,5]
   }
-redenr(){
+render(){
   return {this.list.map(v=>this.getList(v))}
 }
 }

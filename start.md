@@ -8,7 +8,7 @@ yamjs内部实现了集成[webComponents](https://developer.mozilla.org/zh-CN/do
 
 让我们开始吧。
 
-使用yam-cli 工具创建一个应用出来；
+使用yamjs-cli 工具创建一个应用出来；
 
 `yamjs create app`
 
@@ -16,6 +16,11 @@ yamjs内部实现了集成[webComponents](https://developer.mozilla.org/zh-CN/do
 
 - `yarn dev`开始开发模式
 
-- `yarn build`打包应用；开发应用时类似`vue,reactjs`的应用
+- `yarn abuild`打包应用；开发应用时类似`vue,reactjs`的应用
 
-- `yarn build:all` 打包组件未模块文件，会自动生成`yamComponet.esm.min.js`esModule类型文件,`yamComponet.common.min` CommoJS 类型文件,`yamComponet.min.js` UMD文件，三种类型用于其他框架使用
+- `yarn cbuild` 打包组件为模块文件，会自动生成`yamjs-app.esm.js`总的组件库文件以及各个模块的文件
+
+---
+
+vscode 用户建议安装**`yamjs-snipptes`**扩展
+
