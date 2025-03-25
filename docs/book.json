@@ -1,0 +1,10 @@
+{
+  "title": "yamjs文档",
+
+  "plugins": [],
+
+  "scripts": {
+    "ads": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4565784521486024",
+    "adss": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4565784521486024"
+  }
+}
