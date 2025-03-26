@@ -38,6 +38,14 @@ module.exports = {
         async: 'async',
         src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4565784521486024'
       }
+    ],
+    [
+      'script',
+      {
+        crossorigin: 'anonymous',
+        async: 'async',
+        src: 'https://hm.baidu.com/hm.js?968aab0aa4d20594892ad505e2d3821b'
+      }
     ]
   ]
 }
